@@ -15,8 +15,23 @@
  *    }
  */
 
-import { LOAD_REPOS, LOAD_REPOS_SUCCESS, LOAD_REPOS_ERROR } from './constants';
+import {
+  LOAD_REPOS,
+  LOAD_REPOS_SUCCESS,
+  LOAD_REPOS_ERROR,
+  LOAD_RECIPES,
+  LOAD_RECIPES_SUCCESS,
+  SEARCH_RECIPES,
+  CURRENT_RECIPE,
+  ON_DELETE_RECIPE,
+  DELETE_RECIPE_SUCCESS,
+  ON_EDIT_RECIPE,
+  UPDATE_RECIPE_SUCCESS,
+  ON_ADD_RECIPE,
+  ADD_RECIPE_SUCCESS
+} from './constants';
 
+import axios from 'axios';
 /**
  * Load the repositories, this action starts the request saga
  *
@@ -25,6 +40,52 @@ import { LOAD_REPOS, LOAD_REPOS_SUCCESS, LOAD_REPOS_ERROR } from './constants';
 export function loadRepos() {
   return {
     type: LOAD_REPOS,
+  };
+}
+
+/**
+ * Search the recipes, this action starts the request saga
+ *
+ * @return {object} An action object with a type of SEARCH_RECIPES
+ */
+export function searchRecipes() {
+  return {
+    type: SEARCH_RECIPES,
+  };
+}
+
+/**
+ * Search the recipes, this action starts the request saga
+ *
+ * @return {object} An action object with a type of SEARCH_RECIPES
+ */
+export function onDeleteRecipe() {
+  return {
+    type: ON_DELETE_RECIPE,
+  };
+}
+
+/**
+ * Search the recipes, this action starts the request saga
+ *
+ * @return {object} An action object with a type of SEARCH_RECIPES
+ */
+export function onEditRecipe(recipe) {
+  return {
+    type: ON_EDIT_RECIPE,
+    recipe,
+  };
+}
+
+/**
+ * Search the recipes, this action starts the request saga
+ *
+ * @return {object} An action object with a type of SEARCH_RECIPES
+ */
+export function onAddRecipe(recipe) {
+  return {
+    type: ON_ADD_RECIPE,
+    recipe,
   };
 }
 
@@ -55,5 +116,87 @@ export function repoLoadingError(error) {
   return {
     type: LOAD_REPOS_ERROR,
     error,
+  };
+}
+
+/**
+ * Load the recipes, this action starts the request saga
+ *
+ * @return {object} An action object with a type of LOAD_RECIPES
+ */
+export function loadRecipes() {
+  return {
+    type: LOAD_RECIPES,
+  };
+}
+
+/**
+ * Dispatched when the recipes are loaded by the request saga
+ *
+ * @param  {array} recipes The recipes data
+ *
+ * @return {object}      An action object with a type of LOAD_REPOS_SUCCESS passing the recipes
+ */
+export function recipesLoaded(recipes, searchtext) {
+  return {
+    type: LOAD_RECIPES_SUCCESS,
+    recipes,
+    searchtext,
+  };
+}
+
+/**
+ * Dispatched when the recipes are loaded by the request saga
+ *
+ * @param  {string} recipe The recipes data
+ *
+ * @return {object}      An action object with a type of LOAD_REPOS_SUCCESS passing the recipes
+ */
+export function recipeDeleted(recipeId) {
+  return {
+    type: DELETE_RECIPE_SUCCESS,
+    recipeId,
+  };
+}
+
+/**
+ * Dispatched when the recipes are loaded by the request saga
+ *
+ * @param  {string} recipe The recipes data
+ *
+ * @return {object}      An action object with a type of LOAD_REPOS_SUCCESS passing the recipes
+ */
+export function recipeUpdated(recipe) {
+  return {
+    type: UPDATE_RECIPE_SUCCESS,
+    recipe,
+  };
+}
+
+/**
+ * Dispatched when the recipes are loaded by the request saga
+ *
+ * @param  {string} recipe The recipes data
+ *
+ * @return {object}      An action object with a type of LOAD_REPOS_SUCCESS passing the recipes
+ */
+export function recipeAdded(recipe) {
+  return {
+    type: ADD_RECIPE_SUCCESS,
+    recipe,
+  };
+}
+
+/**
+ * Changes the input field of the form
+ *
+ * @param  {string} recipe The new text of the input field
+ *
+ * @return {object} An action object with a type of CHANGE_SEARCHTEXT
+ */
+export function currentRecipe(recipe) {
+  return {
+    type: CURRENT_RECIPE,
+    recipe,
   };
 }

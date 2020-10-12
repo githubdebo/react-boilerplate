@@ -11,7 +11,7 @@ import Select from './Select';
 import ToggleOption from '../ToggleOption';
 
 function Toggle(props) {
-  let content = <option>--</option>;
+  let content = <option value="" disabled selected>Choose Your Option</option>;
 
   // If we have items, render them
   if (props.values) {
@@ -21,9 +21,9 @@ function Toggle(props) {
   }
 
   return (
-    <Select value={props.value} onChange={props.onToggle}>
+    <select value={props.value} onChange={props.onToggle} className="browser-default">
       {content}
-    </Select>
+    </select>
   );
 }
 

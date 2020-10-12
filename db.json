@@ -1,0 +1,45 @@
+{
+  "recipes": [
+    {
+      "id": 5,
+      "recipeName": "Mozarella",
+      "ingredientsList": "2 pounds freshly ground chuck (at least 80% lean) ,1 tablespoon onion powder,1 teaspoon salt ,1 teaspoon freshly ground black pepper ,12 slices deli-counter American cheese,6 large burger buns",
+      "stepsList": "In a large bowl mix ground meat with onion powder and salt and pepper until just combined. Do not overmix or your patties will be tough,In a large bowl, mix ground beef, onion powder, salt and pepper until just combined. Do not overmix, or your patties will be tough,Preheat your grill",
+      "recipeImage": "https://firebasestorage.googleapis.com/v0/b/kitchenstories-6f501.appspot.com/o/images%2Fmozarella.jpg?alt=media&token=e25e22dd-2d07-4efa-954f-9baf986677dc",
+      "cookName": "Debo"
+    },
+    {
+      "id": 6,
+      "recipeName": "Breakfast with Avocado",
+      "ingredientsList": "ssss",
+      "stepsList": "sssssssss",
+      "recipeImage": "https://firebasestorage.googleapis.com/v0/b/kitchenstories-6f501.appspot.com/o/images%2Feggs-breakfast-avocado.jpg?alt=media&token=4fd7d1b8-f2a2-43dd-847c-3b25be9019d6",
+      "cookName": "Debojyoti S"
+    },
+    {
+      "id": 7,
+      "recipeName": "Salad",
+      "ingredientsList": "sss",
+      "stepsList": "ssssss",
+      "recipeImage": "https://firebasestorage.googleapis.com/v0/b/kitchenstories-6f501.appspot.com/o/images%2Fpaleo-diet.jpg?alt=media&token=8e3c969a-a243-4446-ad34-ef9b93a458ec",
+      "cookName": "Debo"
+    }
+  ],
+  "cooks": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 2,
+      "firstName": "Sara",
+      "lastName": "Wilson"
+    },
+    {
+      "id": 3,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    }
+  ]
+}

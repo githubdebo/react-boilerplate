@@ -11,7 +11,7 @@ import messages from './messages';
 function Header() {
   return (
     <div>
-      <A href="https://www.reactboilerplate.com/">
+      {/* <A href="https://www.reactboilerplate.com/">
         <Img src={Banner} alt="react-boilerplate - Logo" />
       </A>
       <NavBar>
@@ -21,7 +21,27 @@ function Header() {
         <HeaderLink to="/features">
           <FormattedMessage {...messages.features} />
         </HeaderLink>
-      </NavBar>
+      </NavBar> */}
+
+      <nav style={{ marginBottom: '30px' }} className="blue">
+        <div className="nav-wrapper">
+          <form>
+            <div className="input-field">
+              <input
+                id="search"
+                type="search"
+                placeholder="Search Recipes..."
+                // ref={text}
+                // onChange={onChange}
+              />
+              <label className="label-icon" htmlFor="search">
+                <i className="material-icons">search</i>
+              </label>
+              <i className="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
     </div>
   );
 }
